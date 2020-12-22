@@ -1,5 +1,5 @@
 import { MutationTree, ActionTree } from 'vuex'
-import { questState,State } from '@/types'
+import { questState,State } from '../../types'
 import { sectionMock } from '../../mock'
 
 const state:questState = {

@@ -1,8 +1,8 @@
 import { createStore } from 'vuex'
-import { RootState } from '@/types'
+import { RootState } from '../types.ts'
 
 // modules
-import modules from './sub'
+import modules from './sub/index.ts'
 
 const CHANGE_IS_IN_PROGRESS = 'CHANGE_IS_IN_PROGRESS'
 

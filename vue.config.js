@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   configureWebpack: {
-    entry: './src/main.js',
+    entry: './src/main.ts',
     externals: {
       jquery: 'jQuery'
     },
