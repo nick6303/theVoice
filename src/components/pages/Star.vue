@@ -4,8 +4,8 @@
 
 </template>
 
-<script>
-import { onMounted } from 'vue'
+<script type="ts">
+import { defineComponent, onMounted } from 'vue'
 const Dots = function() {
   // 画布相关
   this.canvas
@@ -131,7 +131,7 @@ var Main = function() {
   }
 }
 
-export default {
+export default defineComponent({
   setup() {
     onMounted(() => {
       setTimeout(() => {
@@ -141,5 +141,5 @@ export default {
 
     return {}
   }
-}
+})
 </script>

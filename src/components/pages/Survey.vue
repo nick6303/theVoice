@@ -7,7 +7,6 @@ article.survey
       .section(
         v-for="(section,index) in sections"
         :key="section.id"
-        :class="index === currentStep ? 'show' : 'hide'"
       )
         h5 {{section.title}}
         h6 {{section.description}}
@@ -33,7 +32,7 @@ article.survey
 
 <script lang="ts">
 import { defineComponent, computed, reactive } from 'vue'
-import { useModal } from '@act/slime-modal'
+import { useModal } from '../../slime-modal/src'
 import { useStore } from 'vuex'
 import { SurveyPost, QuestionPost } from '../../types'
 import { Checkbox, Radio, Selector, Text } from '../input'

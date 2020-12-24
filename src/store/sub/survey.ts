@@ -27,7 +27,7 @@ const actions: ActionTree<typeof state, State> = {
   },
   postSurvey: async({ commit }, formData) => {
     // TODO: post api and check verification
-    console.log(formData)
+    console.log(formData,commit)
   }
 }
 
