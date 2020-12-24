@@ -99,26 +99,26 @@ export default defineComponent({
     ]
 
     const actLinks = [
-      {
-        url: 'https://google.com',
-        title: '',
-        svg: 'six'
-      },
-      {
-        url: 'https://google.com',
-        title: '',
-        svg: 'envelope'
-      },
-      {
-        url: 'https://google.com',
-        title: '',
-        svg: 'dollar'
-      },
-      {
-        url: 'https://google.com',
-        title: '',
-        svg: 'discount'
-      }
+      // {
+      //   url: 'https://google.com',
+      //   title: '',
+      //   svg: 'six'
+      // },
+      // {
+      //   url: 'https://google.com',
+      //   title: '',
+      //   svg: 'envelope'
+      // },
+      // {
+      //   url: 'https://google.com',
+      //   title: '',
+      //   svg: 'dollar'
+      // },
+      // {
+      //   url: 'https://google.com',
+      //   title: '',
+      //   svg: 'discount'
+      // }
     ]
 
     const otherLink = [
