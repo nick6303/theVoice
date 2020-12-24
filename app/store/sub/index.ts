@@ -21,8 +21,6 @@ requireModule.keys().forEach(fileName => {
       .replace(/\.\w+$/, '')
   )
 
-  console.log(requireModule(fileName).default)
-
   Object.assign(modules, {
     [moduleName]: {
       // add namespace here

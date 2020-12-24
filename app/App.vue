@@ -1,5 +1,9 @@
 <template lang="pug">
 
+AppHeader
+AppMain
+AppFooter
+
 BounceLoading(v-show="inProgress")
 
 </template>
@@ -7,6 +11,8 @@ BounceLoading(v-show="inProgress")
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
 import { useStore } from 'vuex'
+import { AppHeader, AppFooter } from '@/components/layout'
+import AppMain from '@/views/AppMain.vue'
 
 import BounceLoading from '@/components/BounceLoading.vue'
 
@@ -19,6 +25,9 @@ export default defineComponent({
     return { inProgress }
   },
   components: {
+    AppHeader,
+    AppFooter,
+    AppMain,
     BounceLoading
   }
 })
