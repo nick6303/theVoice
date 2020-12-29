@@ -32,7 +32,7 @@ article.survey
 
 <script lang="ts">
 import { defineComponent, computed, reactive } from 'vue'
-import { useModal } from '../../slime-modal/src'
+import { useModal } from '@slime-modal'
 import { useStore } from 'vuex'
 import { SurveyPost, QuestionPost } from '../../types'
 import { Checkbox, Radio, Selector, Text } from '../input'

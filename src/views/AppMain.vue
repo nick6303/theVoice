@@ -7,7 +7,7 @@ ModalContainer.modules
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
-import ModalContainer from '../slime-modal'
+import ModalContainer from '@slime-modal'
 import { Home, Survey } from '../components/pages'
 import { useStore } from 'vuex'
 
