@@ -4,7 +4,7 @@ header#header
     a.logo(
       target="_blank"
       href="#")
-      img(src="@/assets/img/logo.png"
+      img(src="@/assets/img/logo2.png"
     )
     section
       a(
