@@ -72,7 +72,7 @@ header#header
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { useModal } from '../../slime-modal/src'
+import { useModal } from '@slime-modal'
 
 export default defineComponent({
   name: 'AppHeader',
