@@ -9,13 +9,13 @@ article.home
       p 填卷人
       input(
         v-model="account"
-        placeholder="请填写会员帐号"
+        placeholder="報名者姓名"
         @keydown.enter.prevent="submit"
       )
     button.btn(
       type="button"
       @click="submit"
-    ) 立即填写 ►
+    ) 立即填寫 ►
 </template>
 
 <script lang="ts">

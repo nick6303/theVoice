@@ -1,10 +1,10 @@
 <template lang="pug">
 .answerBlock
   .text
-    textarea(
+    input(
       :value="context"
       @change="handleInput"
-      placeholder="简答文字"
+      :placeholder="question.placeholder"
     )
 </template>
 
@@ -12,7 +12,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Text',
+  name: 'Input',
   props: {
     question: {
       type: Object,

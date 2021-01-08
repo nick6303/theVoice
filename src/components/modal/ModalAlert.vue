@@ -14,7 +14,7 @@ section.alert
     button.btn(
       type="button"
       @click="send"
-    ) 确认送出
+    ) 確認送出
 </template>
 
 <script lang="ts">
@@ -42,7 +42,7 @@ export default defineComponent({
       showConfirm.value = false
       type.value = 'finish'
 
-      message.value = '感谢您的耐心填写 若有符合资格彩金将于每周三派发'
+      message.value = '感謝您的耐心填寫 若有符合資格彩金將於每週三派發'
     }
 
     onMounted(() => {

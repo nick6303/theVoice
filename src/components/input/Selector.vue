@@ -12,7 +12,7 @@
           disabled
           selected
           hidden
-        ) 请选择
+        ) {{question.placeholder}}
         option(
           v-for="(option, i) in question.options"
           :key="option"
@@ -21,7 +21,7 @@
     template(v-else)
       span(
         @click="toggleSelect"
-      ) {{ selectedText ? selectedText : '请选择' }}
+      ) {{ selectedText ? selectedText : question.placeholder }}
       ul
         li(
           v-for="(option, i) in question.options"

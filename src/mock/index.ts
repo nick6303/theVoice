@@ -6,10 +6,11 @@ const sectionMock = [
     questions: [
       {
         id: 1,
-        type: 1, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選
+        type: 1, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選;5: 填充表格
         subject: '请问以下哪些因素使您决定参加活动？(最多选3项)',
         isRequired: true,
         needOther: false,
+        placeholder: '',
         options: [
           '活动要求低',
           '活动要求低',
@@ -31,10 +32,11 @@ const sectionMock = [
       },
       {
         id: 1,
-        type: 2, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選
+        type: 2, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選;5: 填充表格
         subject: '请问您较喜欢和种奖励？(最多选3项)',
         isRequired: true,
         needOther: false,
+        placeholder: '',
         options: [
           '活动要求低',
           '活动要求低',
@@ -51,10 +53,20 @@ const sectionMock = [
     questions: [
       {
         id: 1,
-        type: 3, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選
+        type: 3, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選;5: 填充表格
         subject: '请告诉我们您的真心话给迪拜皇宫任何建议或意见。',
         isRequired: true,
         needOther: false,
+        placeholder: '簡答問題',
+        options: [ ]
+      },
+      {
+        id: 1,
+        type: 5, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選;5: 填充表格
+        subject: '您的姓名',
+        isRequired: true,
+        needOther: false,
+        placeholder: '填充表格',
         options: [ ]
       },
     ]
@@ -66,10 +78,11 @@ const sectionMock = [
     questions: [
       {
         id: 1,
-        type: 4, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選
+        type: 4, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選;5: 填充表格
         subject: '迪拜皇宫取款平均多久到账？',
         isRequired: false,
         needOther: false,
+        placeholder: '請選擇',
         options: [
           '1分鐘',
           '1分鐘',

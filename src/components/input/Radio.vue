@@ -22,7 +22,7 @@
     )
     label(:for="`${count}-other`")
       span
-      p Khác
+      p 其他
       input(
         type="text"
         v-model="text"
@@ -63,7 +63,7 @@ export default defineComponent({
   setup(props, { emit }) {
     const active = ref('')
     const text = ref('')
-    const count:number = props.numCount
+    const count:number = props ? props.numCount : 0
     const handleChange = () => {
       emit('update:answers', [active.value])
       emit('update:showError', false)

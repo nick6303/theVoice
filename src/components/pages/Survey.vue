@@ -35,7 +35,7 @@ import { defineComponent, computed, reactive } from 'vue'
 import { useModal } from '@slime-modal'
 import { useStore } from 'vuex'
 import { SurveyPost, QuestionPost } from '../../types'
-import { Checkbox, Radio, Selector, Text } from '../input'
+import { Checkbox, Radio, Selector, Textarea, Input } from '../input'
 
 export default defineComponent({
   name: 'Survey',
@@ -43,7 +43,8 @@ export default defineComponent({
     Checkbox,
     Radio,
     Selector,
-    Text
+    Textarea,
+    Input
   },
   setup() {
     const modal = useModal()
@@ -78,8 +79,9 @@ export default defineComponent({
     const inputType = {
       1: 'Radio',
       2: 'Checkbox',
-      3: 'Text',
-      4: 'Selector'
+      3: 'Textarea',
+      4: 'Selector',
+      5: 'Input'
     }
 
     const numCount = (index:number, qi:number) => {
@@ -113,7 +115,7 @@ export default defineComponent({
         // 填完選單
         const params = {
           type: 'confirm',
-          message: '别急～送出前最后确认下吧',
+          message: '別急～送出前最後確認下吧',
           formData
         }
         modal.show('alert', { params })
@@ -121,7 +123,7 @@ export default defineComponent({
         // 有必填沒填
         const params = {
           type: 'notFinish',
-          message: '提醒您 您有题目尚未完成'
+          message: '提醒您 您有題目尚未完成'
         }
         modal.show('alert', { params })
       }

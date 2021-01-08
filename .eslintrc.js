@@ -40,8 +40,6 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
     // allow debug during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    // disallow trailing commas
-    'comma-dangle': [2, 'never'],
     // allow to use all of the TypeScript directives.
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/ban-ts-ignore': 0,

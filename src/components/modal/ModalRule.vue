@@ -9,24 +9,14 @@ section.rule
     img.mb(src="@/assets/img/rule/title_M.png", alt="alt")
   .scrollBox(v-perfect-scroll)
     p
-      span 活动时间：
-      | 北京时间xx月xx日中午12点至xx月xx日中午12点止
+      span 報名時間：
+      | 台灣時間xx月xx日中午12點至xx月xx日中午12點止
     p
-      span 活动资格：
-      | 2020月01月至活动开始前，累积存款次数达3次，累计存款额达1,000以上
+      span 報名資格：
+      | 對於成為一個偉大的歌手有興趣者
     p
-      span 活动方式：
-      | 于活动时间内填写完毕即可获得彩金
-    table
-      tr
-        th 资格
-        th 彩金
-      tr
-        td 一般会员
-        td 12,345
-      tr
-        td VIP会员
-        td 12,345
+      span 報名方式：
+      | 於報名時間內，完成表單報名
     p 活动细则：
     ul
       li 周计算区间：北京时间每周X中午12点至隔周X中午12点止。
