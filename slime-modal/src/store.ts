@@ -11,10 +11,10 @@ export const createStore = () => {
   }
 
   const show = (payload: {
-    name: string
-    group?: string
-    params?: { [x: string]: any }
-    style?: { [x: string]: string }
+    name: string,
+    group?: string,
+    params?: { [x: string]: any },
+    style?: { [x: string]: string },
   }) => {
     const group = payload.group || 'global'
 
