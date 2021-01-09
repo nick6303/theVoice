@@ -11,7 +11,8 @@ module.exports = {
         '@slime-modal': join('slime-modal/src'),
         '@css': join('src/assets/css'),
         '@img': join('src/assets/img'),
-        '@src': join('src')
+        '@src': join('src'),
+        '@c': join('src/components')
       }
     }
   },

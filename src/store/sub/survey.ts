@@ -1,6 +1,6 @@
 import { MutationTree, ActionTree } from 'vuex'
 import { questState,State } from '../../types'
-import { sectionMock } from '../../mock'
+import { sectionMock } from '../../mock/index2'
 
 const state:questState = {
   surveyOpen: false,

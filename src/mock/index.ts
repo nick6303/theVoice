@@ -11,6 +11,7 @@ const sectionMock = [
         isRequired: true,
         needOther: false,
         placeholder: '',
+        inputType:'',
         options: [
           '活动要求低',
           '活动要求低',
@@ -37,6 +38,7 @@ const sectionMock = [
         isRequired: true,
         needOther: false,
         placeholder: '',
+        inputType:'',
         options: [
           '活动要求低',
           '活动要求低',
@@ -58,6 +60,7 @@ const sectionMock = [
         isRequired: true,
         needOther: false,
         placeholder: '簡答問題',
+        inputType:'',
         options: [ ]
       },
       {
@@ -67,6 +70,7 @@ const sectionMock = [
         isRequired: true,
         needOther: false,
         placeholder: '填充表格',
+        inputType:'',
         options: [ ]
       },
     ]
@@ -83,6 +87,7 @@ const sectionMock = [
         isRequired: false,
         needOther: false,
         placeholder: '請選擇',
+        inputType:'',
         options: [
           '1分鐘',
           '1分鐘',

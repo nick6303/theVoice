@@ -2,7 +2,6 @@
 header#header
   article.pc
     a.logo(
-      target="_blank"
       href="#")
       img(src="@/assets/img/logo2.png"
     )
@@ -84,10 +83,6 @@ export default defineComponent({
     }
 
     const headerLinks = [
-      {
-        url: 'https://google.com',
-        svg: 'home'
-      },
       {
         url: '#',
         svg: 'rule'

@@ -3,6 +3,7 @@ import './assets/css/style.sass'
 
 import { createApp } from 'vue'
 import { createModal } from '@slime-modal'
+import router from './router'
 
 import App from './App.vue'
 
@@ -12,4 +13,4 @@ import store from './store'
 const app = createApp(App)
 
 
-app.use(store).use(createModal('modal')).mount('#app')
+app.use(store).use(createModal('modal')).use(router).mount('#app')

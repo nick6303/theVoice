@@ -2,9 +2,11 @@
 .answerBlock
   .text
     input(
+      :type="question.inputType"
       :value="context"
       @change="handleInput"
       :placeholder="question.placeholder"
+      autocomplete="off"
     )
 </template>
 
