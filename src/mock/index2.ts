@@ -109,7 +109,7 @@ const sectionMock = [
       {
         id: 10,
         type: 4, // 1: 單選；2: 複選；3: 簡答；4: 下拉單選;5: 填充表格
-        subject: '確認密碼',
+        subject: '居住城市',
         isRequired: false,
         needOther: true,
         placeholder: '-城市-',

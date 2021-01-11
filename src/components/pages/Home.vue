@@ -35,9 +35,8 @@ export default defineComponent({
 
     const submit = () => {
       if (account.value) {
-        const path = process.env.NODE_ENV === 'production' ? '/mywork/theVoice':''
         // 判斷是否已填過調查或資格符不符合
-        router.push(`${path}/survey`)
+        router.push('/survey')
       }
     }
     return {

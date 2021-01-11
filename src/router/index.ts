@@ -3,16 +3,16 @@ import { createWebHistory, createRouter } from "vue-router";
 
 
 
-const path = process.env.NODE_ENV === 'production' ? '/mywork/theVoice':''
+const path = process.env.NODE_ENV === 'production' ? '/mywork/theVoice':'/'
 
 const routes = [
   {
-    path:`${path}`,
+    path:'/',
     name: 'Home',
     component: Home,
   },
   {
-    path: `${path}/survey`,
+    path: '/survey',
     name: "Survey",
     component: Survey,
   },
@@ -20,7 +20,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history:createWebHistory(),
+  history:createWebHistory(path),
   routes
 });
 

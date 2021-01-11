@@ -35,7 +35,7 @@ header#header
       @click.prevent="toggleMenu(false)")
       span ►点击此处缩回选单►
     section
-      router-link.logo(to="/") 
+      .logo(@click="toHome") 
         img(src="@/assets/img/logo_M.png")
       ul.top
         //- External activity links
@@ -68,6 +68,7 @@ header#header
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useModal } from '@slime-modal'
+import router from '@/router'
 
 export default defineComponent({
   name: 'AppHeader',
@@ -90,26 +91,26 @@ export default defineComponent({
     ]
 
     const actLinks = [
-      // {
-      //   url: 'https://google.com',
-      //   title: '',
-      //   svg: 'six'
-      // },
-      // {
-      //   url: 'https://google.com',
-      //   title: '',
-      //   svg: 'envelope'
-      // },
-      // {
-      //   url: 'https://google.com',
-      //   title: '',
-      //   svg: 'dollar'
-      // },
-      // {
-      //   url: 'https://google.com',
-      //   title: '',
-      //   svg: 'discount'
-      // }
+      {
+        url: 'https://google.com',
+        title: '',
+        svg: 'six'
+      },
+      {
+        url: 'https://google.com',
+        title: '',
+        svg: 'envelope'
+      },
+      {
+        url: 'https://google.com',
+        title: '',
+        svg: 'dollar'
+      },
+      {
+        url: 'https://google.com',
+        title: '',
+        svg: 'discount'
+      }
     ]
 
     const otherLink = [
@@ -138,13 +139,19 @@ export default defineComponent({
       }
     }
 
+    const toHome = ()=>{
+      router.push('/')
+      toggleMenu(false)
+    }
+
     return {
       isShowSidebar,
       toggleMenu,
       headerLinks,
       actLinks,
       otherLink,
-      showRule
+      showRule,
+      toHome
     }
   }
 })

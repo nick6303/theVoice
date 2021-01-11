@@ -55,8 +55,8 @@ export default defineComponent({
     const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios终端
     const isMobile = isAndroid || isiOS
 
-    const toggleSelect = () => {
-      document.querySelector('.selector')?.classList.toggle('open')
+    const toggleSelect = (event:any) => {
+      event.target.parentNode.classList.toggle('open')
     }
 
     const handleChange = (event:any) => {
