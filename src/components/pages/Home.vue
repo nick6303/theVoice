@@ -21,8 +21,8 @@ article.home
 <script lang="ts">
 
 import { defineComponent, ref } from 'vue'
-import { useStore } from 'vuex'
 import Star from './Star.vue'
+import router from '@/router'
 
 export default defineComponent({
   name: 'Home',
@@ -30,14 +30,13 @@ export default defineComponent({
     Star
   },
   setup() {
-    const store = useStore()
     const account = ref('')
     const isPc = window.innerWidth > 1200
 
     const submit = () => {
       if (account.value) {
         // 判斷是否已填過調查或資格符不符合
-        store.dispatch('survey/setSurveyOpen', true)
+        router.push('/survey')
       }
     }
     return {

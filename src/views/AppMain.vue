@@ -1,15 +1,12 @@
 <template lang="pug">
 main
   router-view 
-  //- Survey(v-if="surveyOpen")
-  //- Home(v-else)
 ModalContainer.modules
 </template>
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
 import ModalContainer from '@slime-modal'
-// import { Home, Survey } from '../components/pages'
 import { useStore } from 'vuex'
 
 export default defineComponent({

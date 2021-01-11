@@ -1,8 +1,7 @@
 <template lang="pug">
 header#header
   article.pc
-    a.logo(
-      href="#")
+    router-link.logo(to="/")
       img(src="@/assets/img/logo2.png"
     )
     section
@@ -19,10 +18,7 @@ header#header
           img(:src="require(`@/assets/img/header/${item.svg}_H.png`)", alt="alt")
 
   article.mb
-    a.logo(
-      target='_blank'
-      href="#"
-    )
+    router-link.logo(to="/") 
       img(src="@/assets/img/logo.png")
     a.switchBtn(
       href="#"
@@ -39,7 +35,7 @@ header#header
       @click.prevent="toggleMenu(false)")
       span ►点击此处缩回选单►
     section
-      a.logo(target="_blank" href="#")
+      router-link.logo(to="/") 
         img(src="@/assets/img/logo_M.png")
       ul.top
         //- External activity links

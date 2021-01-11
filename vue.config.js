@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production' 
+    ? '/mywork/theVoice/'
+    : '/',
   configureWebpack: {
     entry: './src/main.ts',
     externals: {
@@ -8,6 +11,7 @@ module.exports = {
     },
     resolve: {
       alias: {
+        '@': join('src/'),
         '@slime-modal': join('slime-modal/src'),
         '@css': join('src/assets/css'),
         '@img': join('src/assets/img'),

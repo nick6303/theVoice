@@ -3,7 +3,7 @@ import { createWebHistory, createRouter } from "vue-router";
 
 
 
-const path = process.env.NODE_ENV === 'production' ? '/mywork/ebook':''
+const path = process.env.NODE_ENV === 'production' ? '/mywork/theVoice':''
 
 const routes = [
   {
