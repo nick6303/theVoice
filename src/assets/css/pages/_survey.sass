@@ -81,6 +81,10 @@ article.survey
         @media (max-width: 700px)
           font-size: 16px
       .questionBlock
+        display: flex
+        align-self: center
+        @media (max-width: 700px)
+          flex-direction: column
         &:not(:last-child)
           margin: 0 0 20px
         .subject
@@ -88,10 +92,22 @@ article.survey
           font-weight: bolder
           color: #43168e
           padding: 0 0 10px
+          width: 250px
+          text-align: left
           @media (max-width: 1200px)
             font-size: 3.1vmin
+            width: 35vmin
           @media (max-width: 700px)
             font-size: 15px
+            width: 100% 
+            padding: 0
+        .answerBlock
+          margin: 0 0 0 20px
+          flex: 1
+          @media (max-width: 1200px)
+            margin: 0 0 0 2vmin
+          @media (max-width: 700px)
+            margin: 5px 0 0 15px
     .buttons
       +flex-center
       margin: 70px 0 0
@@ -175,6 +191,10 @@ article.survey
       font-size: 20px
       line-height: 2
       width: 100%
+      @media (max-width: 1200px)
+        font-size: 3vmin
+      @media (max-width: 700px)
+        font-size: 15px
     textarea 
       width: 100%
       background-color: transparent
@@ -212,6 +232,8 @@ article.survey
     @media (max-width: 1200px)
       font-size: 4.1vmin
       width: 35vmin
+    @media (max-width: 700px)
+      margin: 10px 0 0
     &:after
       position: absolute
       top: 50%

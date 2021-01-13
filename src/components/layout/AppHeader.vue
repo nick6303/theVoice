@@ -37,18 +37,18 @@ header#header
     section
       .logo(@click="toHome") 
         img(src="@/assets/img/logo_M.png")
-      ul.top
-        //- External activity links
-        li(
-          v-for="(list,index) in actLinks"
-          :key="list.path")
-          a(
-            :href="list.url"
-            target="_blank"
-          )
-            figure
-              img(:src="require(`@/assets/img/header/${list.svg}.png`)", alt="alt")
-            p {{ list.title }}
+      //- ul.top
+      //-   //- External activity links
+      //-   li(
+      //-     v-for="(list,index) in actLinks"
+      //-     :key="list.path")
+      //-     a(
+      //-       :href="list.url"
+      //-       target="_blank"
+      //-     )
+      //-       figure
+      //-         img(:src="require(`@/assets/img/header/${list.svg}.png`)", alt="alt")
+      //-       p {{ list.title }}
       ul.bottom
         //- Fixed links
         li(
@@ -90,28 +90,28 @@ export default defineComponent({
       }
     ]
 
-    const actLinks = [
-      {
-        url: 'https://google.com',
-        title: '',
-        svg: 'six'
-      },
-      {
-        url: 'https://google.com',
-        title: '',
-        svg: 'envelope'
-      },
-      {
-        url: 'https://google.com',
-        title: '',
-        svg: 'dollar'
-      },
-      {
-        url: 'https://google.com',
-        title: '',
-        svg: 'discount'
-      }
-    ]
+    // const actLinks = [
+    //   {
+    //     url: 'https://google.com',
+    //     title: '',
+    //     svg: 'six'
+    //   },
+    //   {
+    //     url: 'https://google.com',
+    //     title: '',
+    //     svg: 'envelope'
+    //   },
+    //   {
+    //     url: 'https://google.com',
+    //     title: '',
+    //     svg: 'dollar'
+    //   },
+    //   {
+    //     url: 'https://google.com',
+    //     title: '',
+    //     svg: 'discount'
+    //   }
+    // ]
 
     const otherLink = [
       {
@@ -148,7 +148,7 @@ export default defineComponent({
       isShowSidebar,
       toggleMenu,
       headerLinks,
-      actLinks,
+      // actLinks,
       otherLink,
       showRule,
       toHome
