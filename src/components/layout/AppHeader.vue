@@ -67,7 +67,7 @@ header#header
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { useModal } from '@slime-modal'
+import { useModal } from '@c/slime-modal/src'
 import router from '@/router'
 
 export default defineComponent({
@@ -82,12 +82,12 @@ export default defineComponent({
     const headerLinks = [
       {
         url: '#',
-        svg: 'rule'
+        svg: 'rule',
       },
       {
         url: 'https://google.com',
-        svg: 'service'
-      }
+        svg: 'service',
+      },
     ]
 
     // const actLinks = [
@@ -117,21 +117,21 @@ export default defineComponent({
       {
         url: 'https://google.com',
         title: '官網首頁',
-        svg: 'home'
+        svg: 'home',
       },
       {
         url: '#',
         title: '活動細則',
-        svg: 'rule'
+        svg: 'rule',
       },
       {
         url: 'https://google.com',
         title: '線上客服',
-        svg: 'service'
-      }
+        svg: 'service',
+      },
     ]
 
-    const showRule = (event:any) => {
+    const showRule = (event: any) => {
       if (event.target.href.indexOf('#') > -1) {
         event.preventDefault()
         modal.show('rule')
@@ -139,7 +139,7 @@ export default defineComponent({
       }
     }
 
-    const toHome = ()=>{
+    const toHome = () => {
       router.push('/')
       toggleMenu(false)
     }
@@ -151,8 +151,8 @@ export default defineComponent({
       // actLinks,
       otherLink,
       showRule,
-      toHome
+      toHome,
     }
-  }
+  },
 })
 </script>

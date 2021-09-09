@@ -6,7 +6,7 @@ ModalContainer.modules
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
-import ModalContainer from '@slime-modal'
+import ModalContainer from '@c/slime-modal/src'
 import { useStore } from 'vuex'
 
 export default defineComponent({
@@ -20,8 +20,8 @@ export default defineComponent({
     const store = useStore()
     const surveyOpen = computed(() => store.state.survey.surveyOpen)
     return {
-      surveyOpen
+      surveyOpen,
     }
-  }
+  },
 })
 </script>

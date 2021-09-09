@@ -2,7 +2,7 @@ import './assets/css/layout/reset.css'
 import './assets/css/style.sass'
 
 import { createApp } from 'vue'
-import { createModal } from '@slime-modal'
+import { createModal } from './components/slime-modal/src'
 import router from './router'
 
 import App from './App.vue'

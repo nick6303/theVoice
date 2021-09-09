@@ -32,7 +32,7 @@ article.survey
 
 <script lang="ts">
 import { defineComponent, computed, reactive } from 'vue'
-import { useModal } from '@slime-modal'
+import { useModal } from '@c/slime-modal/src'
 import { useStore } from 'vuex'
 import { SurveyPost, QuestionPost } from '../../types'
 import { Checkbox, Radio, Selector, Textarea, Input } from '../input'
@@ -44,7 +44,7 @@ export default defineComponent({
     Radio,
     Selector,
     Textarea,
-    Input
+    Input,
   },
   setup() {
     const modal = useModal()
@@ -54,23 +54,21 @@ export default defineComponent({
     const sections = computed(() => store.state.survey.sections)
 
     const tmp: SurveyPost[] = []
-    sections.value.forEach(section => {
+    sections.value.forEach((section) => {
       const questions: QuestionPost[] = []
-      section.questions.forEach(question => {
-        const {
-          id
-        } = question
+      section.questions.forEach((question) => {
+        const { id } = question
         const q = {
           id, // question id
           answers: [], // QType: 1、2、4 時，資料型態為 array
           context: '', // QType: 3 或有 "其他" 選項內容
-          showError: false // for 驗證用
+          showError: false, // for 驗證用
         }
         questions.push(q)
       })
       const obj = {
         id: section.id, // sections id
-        questions
+        questions,
       }
       tmp.push(obj)
     })
@@ -81,10 +79,10 @@ export default defineComponent({
       2: 'Checkbox',
       3: 'Textarea',
       4: 'Selector',
-      5: 'Input'
+      5: 'Input',
     }
 
-    const numCount = (index:number, qi:number) => {
+    const numCount = (index: number, qi: number) => {
       let count = 0
       for (let i = 0; i < index; i++) {
         count = count + sections.value[i].questions.length
@@ -96,10 +94,7 @@ export default defineComponent({
       const arr: boolean[] = []
       for (let i = 0; i < sections.value.length; i++) {
         formData[i].questions.forEach((q, qi) => {
-          const {
-            isRequired,
-            type
-          } = sections.value[i].questions[qi]
+          const { isRequired, type } = sections.value[i].questions[qi]
           if (isRequired) {
             let status = !!q.answers?.length
             if (type === 3) {
@@ -116,14 +111,14 @@ export default defineComponent({
         const params = {
           type: 'confirm',
           message: '別急～送出前最後確認下吧',
-          formData
+          formData,
         }
         modal.show('alert', { params })
       } else {
         // 有必填沒填
         const params = {
           type: 'notFinish',
-          message: '提醒您 您有題目尚未完成'
+          message: '提醒您 您有題目尚未完成',
         }
         modal.show('alert', { params })
       }
@@ -134,8 +129,8 @@ export default defineComponent({
       formData,
       inputType,
       numCount,
-      checkValidate
+      checkValidate,
     }
-  }
+  },
 })
 </script>
